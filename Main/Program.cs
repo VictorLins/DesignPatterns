@@ -1,4 +1,5 @@
-﻿using Main.Singleton;
+﻿using Main.Facade;
+using Main.Singleton;
 using Main.TemplateMethod;
 
 bool lShowMenu = true;
@@ -18,6 +19,7 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("Please Enter Your Choice:");
     Console.WriteLine();
+
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("---------------------");
     Console.WriteLine("TEMPLATE METHOD");
@@ -25,6 +27,7 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   1. Structural");
     Console.WriteLine("   2. Practical");
+
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("---------------------");
     Console.WriteLine("SINGLETON");
@@ -32,6 +35,15 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   3. Structural");
     Console.WriteLine("   4. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("FACADE");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   5. Structural");
+    Console.WriteLine("   6. Practical");
+
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
     Console.WriteLine("EXIT");
@@ -62,7 +74,17 @@ static bool MainMenu()
             ShowHeader("SINGLETON - PRACTICAL");
             SingletonPractical.Execute();
             ShowFooter();
-            return true;            
+            return true;
+        case "5":
+            ShowHeader("FACADE - STRUCTURAL");
+            FacadeStructural.Execute();
+            ShowFooter();
+            return true;
+        case "6":
+            ShowHeader("FACADE - PRACTICAL");
+            FacadePractical.Execute();
+            ShowFooter();
+            return true;
         case "0": return false;
         default: return true;
     }
