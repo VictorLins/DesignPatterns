@@ -1,4 +1,5 @@
-﻿using Main.TemplateMethod;
+﻿using Main.Singleton;
+using Main.TemplateMethod;
 
 bool lShowMenu = true;
 while (lShowMenu)
@@ -52,6 +53,16 @@ static bool MainMenu()
             TemplateMethodPractical.Execute();
             ShowFooter();
             return true;
+        case "3":
+            ShowHeader("SINGLETON - STRUCTURAL");
+            SingletonStructural.Execute();
+            ShowFooter();
+            return true;
+        case "4":
+            ShowHeader("SINGLETON - PRACTICAL");
+            SingletonPractical.Execute();
+            ShowFooter();
+            return true;            
         case "0": return false;
         default: return true;
     }
