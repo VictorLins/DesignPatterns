@@ -1,4 +1,5 @@
 ﻿using Main.Facade;
+using Main.Factory;
 using Main.Singleton;
 using Main.TemplateMethod;
 
@@ -44,6 +45,14 @@ static bool MainMenu()
     Console.WriteLine("   5. Structural");
     Console.WriteLine("   6. Practical");
 
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("FACTORY METHOD");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   7. Structural");
+    Console.WriteLine("   8. Practical");
+
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
     Console.WriteLine("EXIT");
@@ -83,6 +92,16 @@ static bool MainMenu()
         case "6":
             ShowHeader("FACADE - PRACTICAL");
             FacadePractical.Execute();
+            ShowFooter();
+            return true;
+        case "7":
+            ShowHeader("FACTORY METHOD - STRUCTURAL");
+            FactoryMethodStructural.Execute();
+            ShowFooter();
+            return true;
+        case "8":
+            ShowHeader("FACTORY METHOD - PRACTICAL");
+            FactoryMethodPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
