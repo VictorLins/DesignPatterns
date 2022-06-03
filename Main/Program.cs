@@ -1,4 +1,5 @@
-﻿using Main.Decorator;
+﻿using Main.ChainOfResponsability;
+using Main.Decorator;
 using Main.Facade;
 using Main.Factory;
 using Main.Singleton;
@@ -12,6 +13,7 @@ while (lShowMenu)
 
 static bool MainMenu()
 {
+    Console.Clear();
     Console.ForegroundColor = ConsoleColor.Green;
     Console.Clear();
     Console.WriteLine("---------------------------------");
@@ -61,6 +63,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   9. Structural");
     Console.WriteLine("   10. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("CHAIN OF RESPONSIBILITY");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   11. Structural");
+    Console.WriteLine("   12. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -125,6 +135,16 @@ static bool MainMenu()
             DecoratorPractical.Execute();
             ShowFooter();
             return true;
+        case "11":
+            ShowHeader("CHAIN OF RESPONSIBILITY - STRUCTURAL");
+            ChainOfResponsibilityStructural.Execute();
+            ShowFooter();
+            return true;
+        case "12":
+            ShowHeader("CHAIN OF RESPONSIBILITY - PRACTICAL");
+            ChainOfResponsibilityPractical.Execute();
+            ShowFooter();
+            return true;
         case "0": return false;
         default: return true;
     }
@@ -134,9 +154,9 @@ static void ShowHeader(string prDesignPatternTitle)
 {
     Console.Clear();
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("---------------------------------");
+    Console.WriteLine("-------------------------------------");
     Console.WriteLine(prDesignPatternTitle);
-    Console.WriteLine("---------------------------------\n\r");
+    Console.WriteLine("-------------------------------------\n\r");
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("Output:\n\r");
     Console.ForegroundColor = ConsoleColor.Yellow;
@@ -145,7 +165,7 @@ static void ShowHeader(string prDesignPatternTitle)
 static void ShowFooter()
 {
     Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine("\r\n---------------------------------");
+    Console.WriteLine("\r\n-------------------------------------");
     Console.Write("Press any key to return to main menu...");
     Console.ReadKey();
 }
