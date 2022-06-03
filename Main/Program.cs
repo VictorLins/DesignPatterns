@@ -1,4 +1,5 @@
-﻿using Main.Facade;
+﻿using Main.Decorator;
+using Main.Facade;
 using Main.Factory;
 using Main.Singleton;
 using Main.TemplateMethod;
@@ -53,6 +54,14 @@ static bool MainMenu()
     Console.WriteLine("   7. Structural");
     Console.WriteLine("   8. Practical");
 
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("DECORATOR");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   9. Structural");
+    Console.WriteLine("   10. Practical");
+
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
     Console.WriteLine("EXIT");
@@ -61,6 +70,8 @@ static bool MainMenu()
     Console.WriteLine("   0. Exit");
     Console.WriteLine("\r\n---------------------------------");
     Console.Write("Selected option: ");
+
+    Console.SetWindowPosition(0, 0);
 
     switch (Console.ReadLine())
     {
@@ -102,6 +113,16 @@ static bool MainMenu()
         case "8":
             ShowHeader("FACTORY METHOD - PRACTICAL");
             FactoryMethodPractical.Execute();
+            ShowFooter();
+            return true;
+        case "9":
+            ShowHeader("DECORATOR - STRUCTURAL");
+            DecoratorStructural.Execute();
+            ShowFooter();
+            return true;
+        case "10":
+            ShowHeader("DECORATOR - PRACTICAL");
+            DecoratorPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;

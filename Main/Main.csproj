@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Structural\Facade\" />
+    <Folder Include="Structural\Decorator\" />
   </ItemGroup>
 
 </Project>
