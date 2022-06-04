@@ -5,6 +5,7 @@ using Main.Decorator;
 using Main.Facade;
 using Main.Factory;
 using Main.Singleton;
+using Main.State;
 using Main.TemplateMethod;
 
 bool lShowMenu = true;
@@ -89,6 +90,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   15. Structural");
     Console.WriteLine("   16. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("STATE");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   17. Structural");
+    Console.WriteLine("   18. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -179,6 +188,16 @@ static bool MainMenu()
         case "16":
             ShowHeader("BUILDER - PRACTICAL");
             BuilderPractical.Execute();
+            ShowFooter();
+            return true;
+        case "17":
+            ShowHeader("STATE - STRUCTURAL");
+            StateStructural.Execute();
+            ShowFooter();
+            return true;
+        case "18":
+            ShowHeader("STATE - PRACTICAL");
+            StatePractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
