@@ -1,4 +1,5 @@
 ﻿using Main.Adapter;
+using Main.Builder;
 using Main.ChainOfResponsability;
 using Main.Decorator;
 using Main.Facade;
@@ -81,6 +82,14 @@ static bool MainMenu()
     Console.WriteLine("   13. Structural");
     Console.WriteLine("   14. Practical");
 
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("BUILDER");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   15. Structural");
+    Console.WriteLine("   16. Practical");
+
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
     Console.WriteLine("EXIT");
@@ -160,6 +169,16 @@ static bool MainMenu()
         case "14":
             ShowHeader("ADAPTER - PRACTICAL");
             AdapterPractical.Execute();
+            ShowFooter();
+            return true;
+        case "15":
+            ShowHeader("BUILDER - STRUCTURAL");
+            BuilderStructural.Execute();
+            ShowFooter();
+            return true;
+        case "16":
+            ShowHeader("BUILDER - PRACTICAL");
+            BuilderPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
