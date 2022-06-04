@@ -1,4 +1,5 @@
-﻿using Main.ChainOfResponsability;
+﻿using Main.Adapter;
+using Main.ChainOfResponsability;
 using Main.Decorator;
 using Main.Facade;
 using Main.Factory;
@@ -72,6 +73,14 @@ static bool MainMenu()
     Console.WriteLine("   11. Structural");
     Console.WriteLine("   12. Practical");
 
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("ADAPTER");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   13. Structural");
+    Console.WriteLine("   14. Practical");
+
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
     Console.WriteLine("EXIT");
@@ -80,8 +89,6 @@ static bool MainMenu()
     Console.WriteLine("   0. Exit");
     Console.WriteLine("\r\n---------------------------------");
     Console.Write("Selected option: ");
-
-    Console.SetWindowPosition(0, 0);
 
     switch (Console.ReadLine())
     {
@@ -145,6 +152,16 @@ static bool MainMenu()
             ChainOfResponsibilityPractical.Execute();
             ShowFooter();
             return true;
+        case "13":
+            ShowHeader("ADAPTER - STRUCTURAL");
+            AdapterStructural.Execute();
+            ShowFooter();
+            return true;
+        case "14":
+            ShowHeader("ADAPTER - PRACTICAL");
+            AdapterPractical.Execute();
+            ShowFooter();
+            return true;
         case "0": return false;
         default: return true;
     }
@@ -154,9 +171,9 @@ static void ShowHeader(string prDesignPatternTitle)
 {
     Console.Clear();
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("-------------------------------------");
+    Console.WriteLine("-----------------------------------------");
     Console.WriteLine(prDesignPatternTitle);
-    Console.WriteLine("-------------------------------------\n\r");
+    Console.WriteLine("-----------------------------------------\n\r");
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("Output:\n\r");
     Console.ForegroundColor = ConsoleColor.Yellow;
