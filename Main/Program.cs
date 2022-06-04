@@ -6,6 +6,7 @@ using Main.Facade;
 using Main.Factory;
 using Main.Singleton;
 using Main.State;
+using Main.Strategy;
 using Main.TemplateMethod;
 
 bool lShowMenu = true;
@@ -98,6 +99,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   17. Structural");
     Console.WriteLine("   18. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("STRATEGY");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   19. Structural");
+    Console.WriteLine("   20. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -198,6 +207,16 @@ static bool MainMenu()
         case "18":
             ShowHeader("STATE - PRACTICAL");
             StatePractical.Execute();
+            ShowFooter();
+            return true;
+        case "19":
+            ShowHeader("STRATEGY - STRUCTURAL");
+            StrategyStructural.Execute();
+            ShowFooter();
+            return true;
+        case "20":
+            ShowHeader("STRATEGY - PRACTICAL");
+            StrategyPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
