@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Behavioral\Observer\" />
     <Folder Include="Structural\Facade\" />
     <Folder Include="Structural\Decorator\" />
   </ItemGroup>
