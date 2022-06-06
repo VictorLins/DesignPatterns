@@ -1,4 +1,5 @@
-﻿using Main.Adapter;
+﻿using Main.AbstractFactory;
+using Main.Adapter;
 using Main.Builder;
 using Main.ChainOfResponsability;
 using Main.Decorator;
@@ -107,6 +108,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   19. Structural");
     Console.WriteLine("   20. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("ABSTRACT FACTORY");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   21. Structural");
+    Console.WriteLine("   22. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -217,6 +226,16 @@ static bool MainMenu()
         case "20":
             ShowHeader("STRATEGY - PRACTICAL");
             StrategyPractical.Execute();
+            ShowFooter();
+            return true;
+        case "21":
+            ShowHeader("ABSTRACT FACTORY - STRUCTURAL");
+            AbstractFactoryStructural.Execute();
+            ShowFooter();
+            return true;
+        case "22":
+            ShowHeader("ABSTRACT FACTORY - PRACTICAL");
+            AbstractFactoryPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
