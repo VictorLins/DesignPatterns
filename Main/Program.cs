@@ -7,6 +7,7 @@ using Main.Composite;
 using Main.Decorator;
 using Main.Facade;
 using Main.Factory;
+using Main.Mediator;
 using Main.Memento;
 using Main.Observer;
 using Main.Singleton;
@@ -152,6 +153,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   29. Structural");
     Console.WriteLine("   30. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("MEDIATOR");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   31. Structural");
+    Console.WriteLine("   32. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -312,6 +321,16 @@ static bool MainMenu()
         case "30":
             ShowHeader("COMMAND - PRACTICAL");
             CommandPractical.Execute();
+            ShowFooter();
+            return true;
+        case "31":
+            ShowHeader("MEDIATOR - STRUCTURAL");
+            MediatorStructural.Execute();
+            ShowFooter();
+            return true;
+        case "32":
+            ShowHeader("MEDIATOR - PRACTICAL");
+            MediatorPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
