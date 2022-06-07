@@ -2,6 +2,7 @@
 using Main.Adapter;
 using Main.Builder;
 using Main.ChainOfResponsability;
+using Main.Composite;
 using Main.Decorator;
 using Main.Facade;
 using Main.Factory;
@@ -125,6 +126,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   23. Structural");
     Console.WriteLine("   24. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("COMPOSITE");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   25. Structural");
+    Console.WriteLine("   26. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -255,6 +264,16 @@ static bool MainMenu()
         case "24":
             ShowHeader("OBSERVER - PRACTICAL");
             ObserverPractical.Execute();
+            ShowFooter();
+            return true;
+        case "25":
+            ShowHeader("COMPOSITE - STRUCTURAL");
+            CompositeStructural.Execute();
+            ShowFooter();
+            return true;
+        case "26":
+            ShowHeader("COMPOSITE - PRACTICAL");
+            CompositePractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
