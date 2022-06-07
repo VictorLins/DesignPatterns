@@ -6,6 +6,7 @@ using Main.Composite;
 using Main.Decorator;
 using Main.Facade;
 using Main.Factory;
+using Main.Memento;
 using Main.Observer;
 using Main.Singleton;
 using Main.State;
@@ -134,6 +135,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   25. Structural");
     Console.WriteLine("   26. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("MEMENTO");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   27. Structural");
+    Console.WriteLine("   28. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -274,6 +283,16 @@ static bool MainMenu()
         case "26":
             ShowHeader("COMPOSITE - PRACTICAL");
             CompositePractical.Execute();
+            ShowFooter();
+            return true;
+        case "27":
+            ShowHeader("MEMENTO - STRUCTURAL");
+            MementoStructural.Execute();
+            ShowFooter();
+            return true;
+        case "28":
+            ShowHeader("MEMENTO - PRACTICAL");
+            MementoPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
