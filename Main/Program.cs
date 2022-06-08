@@ -7,6 +7,7 @@ using Main.Composite;
 using Main.Decorator;
 using Main.Facade;
 using Main.Factory;
+using Main.Interpreter;
 using Main.Mediator;
 using Main.Memento;
 using Main.Observer;
@@ -161,6 +162,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   31. Structural");
     Console.WriteLine("   32. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("INTERPRETER");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   33. Structural");
+    Console.WriteLine("   34. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -331,6 +340,16 @@ static bool MainMenu()
         case "32":
             ShowHeader("MEDIATOR - PRACTICAL");
             MediatorPractical.Execute();
+            ShowFooter();
+            return true;
+        case "33":
+            ShowHeader("INTERPRETER - STRUCTURAL");
+            InterpreterStructural.Execute();
+            ShowFooter();
+            return true;
+        case "34":
+            ShowHeader("INTERPRETER - PRACTICAL");
+            InterpreterPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
