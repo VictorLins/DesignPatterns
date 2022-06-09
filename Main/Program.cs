@@ -11,6 +11,7 @@ using Main.Interpreter;
 using Main.Mediator;
 using Main.Memento;
 using Main.Observer;
+using Main.Prototype;
 using Main.Singleton;
 using Main.State;
 using Main.Strategy;
@@ -170,6 +171,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   33. Structural");
     Console.WriteLine("   34. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("PROTOTYPE");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   35. Structural");
+    Console.WriteLine("   36. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -350,6 +359,16 @@ static bool MainMenu()
         case "34":
             ShowHeader("INTERPRETER - PRACTICAL");
             InterpreterPractical.Execute();
+            ShowFooter();
+            return true;
+        case "35":
+            ShowHeader("PROTOTYPE - STRUCTURAL");
+            PrototypeStructural.Execute();
+            ShowFooter();
+            return true;
+        case "36":
+            ShowHeader("PROTOTYPE - PRACTICAL");
+            PrototypePractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
