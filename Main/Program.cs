@@ -1,5 +1,6 @@
 ﻿using Main.AbstractFactory;
 using Main.Adapter;
+using Main.Bridge;
 using Main.Builder;
 using Main.ChainOfResponsability;
 using Main.Command;
@@ -179,6 +180,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   35. Structural");
     Console.WriteLine("   36. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("BRIDGE");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   37. Structural");
+    Console.WriteLine("   38. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -369,6 +378,16 @@ static bool MainMenu()
         case "36":
             ShowHeader("PROTOTYPE - PRACTICAL");
             PrototypePractical.Execute();
+            ShowFooter();
+            return true;
+        case "37":
+            ShowHeader("BRIDGE - STRUCTURAL");
+            BridgeStructural.Execute();
+            ShowFooter();
+            return true;
+        case "38":
+            ShowHeader("BRIDGE - PRACTICAL");
+            BridgePractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
