@@ -9,6 +9,7 @@ using Main.Decorator;
 using Main.Facade;
 using Main.Factory;
 using Main.Interpreter;
+using Main.Iterator;
 using Main.Mediator;
 using Main.Memento;
 using Main.Observer;
@@ -188,6 +189,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   37. Structural");
     Console.WriteLine("   38. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("ITERATOR");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   39. Structural");
+    Console.WriteLine("   40. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -388,6 +397,16 @@ static bool MainMenu()
         case "38":
             ShowHeader("BRIDGE - PRACTICAL");
             BridgePractical.Execute();
+            ShowFooter();
+            return true;
+        case "39":
+            ShowHeader("ITERATOR - STRUCTURAL");
+            IteratorStructural.Execute();
+            ShowFooter();
+            return true;
+        case "40":
+            ShowHeader("ITERATOR - PRACTICAL");
+            IteratorPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
