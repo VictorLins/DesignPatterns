@@ -8,6 +8,7 @@ using Main.Composite;
 using Main.Decorator;
 using Main.Facade;
 using Main.Factory;
+using Main.Flyweight;
 using Main.Interpreter;
 using Main.Iterator;
 using Main.Mediator;
@@ -215,6 +216,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   43. Structural");
     Console.WriteLine("   44. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("FLYWEIGHT");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   45. Structural");
+    Console.WriteLine("   46. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -445,6 +454,16 @@ static bool MainMenu()
         case "44":
             ShowHeader("PROXY - PRACTICAL");
             ProxyPractical.Execute();
+            ShowFooter();
+            return true;
+        case "45":
+            ShowHeader("FLYWEIGHT - STRUCTURAL");
+            FlyweightStructural.Execute();
+            ShowFooter();
+            return true;
+        case "46":
+            ShowHeader("FLYWEIGHT - PRACTICAL");
+            FlyweightPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
