@@ -14,6 +14,7 @@ using Main.Mediator;
 using Main.Memento;
 using Main.Observer;
 using Main.Prototype;
+using Main.Proxy;
 using Main.Singleton;
 using Main.State;
 using Main.Strategy;
@@ -206,6 +207,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   41. Structural");
     Console.WriteLine("   42. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("PROXY");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   43. Structural");
+    Console.WriteLine("   44. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -426,6 +435,16 @@ static bool MainMenu()
         case "42":
             ShowHeader("VISITOR - PRACTICAL");
             VisitorPractical.Execute();
+            ShowFooter();
+            return true;
+        case "43":
+            ShowHeader("PROXY - STRUCTURAL");
+            ProxyStructural.Execute();
+            ShowFooter();
+            return true;
+        case "44":
+            ShowHeader("PROXY - PRACTICAL");
+            ProxyPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
