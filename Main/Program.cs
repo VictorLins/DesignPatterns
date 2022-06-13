@@ -18,6 +18,7 @@ using Main.Singleton;
 using Main.State;
 using Main.Strategy;
 using Main.TemplateMethod;
+using Main.Visitor;
 
 bool lShowMenu = true;
 while (lShowMenu)
@@ -197,6 +198,14 @@ static bool MainMenu()
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("   39. Structural");
     Console.WriteLine("   40. Practical");
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("---------------------");
+    Console.WriteLine("VISITOR");
+    Console.WriteLine("---------------------");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("   41. Structural");
+    Console.WriteLine("   42. Practical");
 
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine("---------------------");
@@ -407,6 +416,16 @@ static bool MainMenu()
         case "40":
             ShowHeader("ITERATOR - PRACTICAL");
             IteratorPractical.Execute();
+            ShowFooter();
+            return true;
+        case "41":
+            ShowHeader("VISITOR - STRUCTURAL");
+            VisitorStructural.Execute();
+            ShowFooter();
+            return true;
+        case "42":
+            ShowHeader("VISITOR - PRACTICAL");
+            VisitorPractical.Execute();
             ShowFooter();
             return true;
         case "0": return false;
