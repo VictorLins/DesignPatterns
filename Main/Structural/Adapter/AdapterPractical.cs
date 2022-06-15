@@ -28,7 +28,7 @@
 
     public class VideoPlayerAdapter : MediaPlayer
     {
-        VideoPlayerLibrary _VideoPlayerLibrary = new VideoPlayerLibrary();
+        private VideoPlayerLibrary _VideoPlayerLibrary = new VideoPlayerLibrary();
 
         public override void Play(String prFile)
         {
@@ -54,7 +54,7 @@
 
     public class AudioPlayerAdapter : MediaPlayer
     {
-        AudioPlayerLibrary _AudioPlayerLibrary = new AudioPlayerLibrary();
+        private AudioPlayerLibrary _AudioPlayerLibrary = new AudioPlayerLibrary();
 
         public override void Play(String prFile)
         {

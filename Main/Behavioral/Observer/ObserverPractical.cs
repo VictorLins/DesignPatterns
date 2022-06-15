@@ -15,7 +15,7 @@
 
     public abstract class TwitterProfile
     {
-        protected List<TwitterFollower> _Followers = new List<TwitterFollower>();
+        private List<TwitterFollower> _Followers = new List<TwitterFollower>();
 
         public void Attach(TwitterFollower prFollower)
         {

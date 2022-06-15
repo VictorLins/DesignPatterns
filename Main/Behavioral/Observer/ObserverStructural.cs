@@ -15,7 +15,7 @@
 
     public abstract class Subject
     {
-        protected List<Observer> _Observers = new List<Observer>();
+        private List<Observer> _Observers = new List<Observer>();
 
         public void Attach(Observer prObserver)
         {

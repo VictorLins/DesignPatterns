@@ -12,7 +12,6 @@
             lSortedListContext.AddItem("E");
             lSortedListContext.AddItem("G");
             lSortedListContext.AddItem("F");
-            Console.WriteLine("Original List: " + String.Join(", ", lSortedListContext._Items));
 
             lSortedListContext.SetSortStrategy(new Ascending());
             lSortedListContext.Sort();
@@ -62,7 +61,7 @@
 
     public class SortedListContext
     {
-        public List<string> _Items = new List<string>();
+        private List<string> _Items = new List<string>();
         private SortStrategy _SortStrategy;
 
         public void SetSortStrategy(SortStrategy prSortStrategy)

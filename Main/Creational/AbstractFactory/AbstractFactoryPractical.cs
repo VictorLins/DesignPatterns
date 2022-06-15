@@ -15,7 +15,6 @@
     public abstract class Processor { }
     public abstract class Motherboard { }
     public abstract class Storage { }
-
     public class DellProcessor : Processor { }
     public class AppleProcessor : Processor { }
     public class DellMotherboard : Motherboard { }

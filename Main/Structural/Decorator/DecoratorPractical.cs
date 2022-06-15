@@ -40,7 +40,7 @@
 
     public abstract class ToppingDecorator : PizzaItem
     {
-        public PizzaItem _PizzaItem;
+        protected PizzaItem _PizzaItem;
 
         public ToppingDecorator(PizzaItem prPizzaItem)
         {
